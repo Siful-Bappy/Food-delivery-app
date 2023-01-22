@@ -163,7 +163,46 @@ main{
   line-height: 70px;
   transition: 0.5s;
 }
+.bottomMenu ul li:hover a .icon{
+  transform: translateY(-16px);
+}
 .bottomMenu ul li a .icon .MuiSvgIcon-root{
   font-size: 30px;
   color: #373848;
+}
+.bottomMenu ul li:hover a .icon .MuiSvgIcon-root{
+  color: #faf9fb;
+  transition: 0.5s;
+}
+.indicator{
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-color: #f8901c;
+  border-radius: 100vw;
+  top: -50%;
+  border: 6px solid #faf9fb;
+  transition: .5s;
+}
+.indicator::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  height: 18px;
+  width: 18px;
+  border-top-right-radius: 18px;
+  background-color: transparent;
+  box-sizing: 0px -10px 0 0 #faf9fb;
+}
+.indicator::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  height: 18px;
+  width: 18px;
+  border-top-left-radius: 18px;
+  background-color: transparent;
+  box-sizing: 0px -10px 0 0 #faf9fb;
 }
