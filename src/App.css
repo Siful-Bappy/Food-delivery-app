@@ -34,4 +34,82 @@ header{
   display: flex;
   align-items: center;
   overflow: none;
+  padding: 8px 15px;
+}
+.inputBox .searchIcon{
+  color: #787a84;
+  font-size: 20px;
+}
+.inputBox input{
+  border: none;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background-color: transparent;
+  color: #787a84;
+  padding: 8px;
+  font-size: 15px;
+  font-weight: 500px;
+}
+.shoppingCart{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+.shoppingCart .cart{
+  font-size: 30px;
+  color: #373848;
+}
+.shoppingCart .cart_content{
+  width: 20px;
+  height: 20px;
+  background-color: #f8901c;
+  border-radius: 100px;
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+  top: 8;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shoppingCart .cart_content p{
+  font-weight: 500;
+  color: #fff;
+}
+.profileContainer{
+  display: flex;
+  align-items: center;
+}
+.profileContainer .imgBox{
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 100vw;
+  background-color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.profileContainer .imgBox .profilePic{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.profileContainer .userName{
+  font-size: 16px;
+  margin-left: 8px;
+  font-weight: 500;
+  display: none;
+}
+.toggleMenu{
+  transform: rotate(90deg);
+}
+.toggleMenu .toggleIcon{
+  color: #373848;
+  font-size: 30px;
 }
