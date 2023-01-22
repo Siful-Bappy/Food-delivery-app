@@ -6,7 +6,7 @@ import { BarChart } from '@mui/icons-material';
 const Header = () => {
     return (
         <header>
-            <img src="" alt="" />
+            <img className='logo' src="https://firebasestorage.googleapis.com/v0/b/food-delivery-37c59.appspot.com/o/Images%2Flogo.png?alt=media&token=fc228623-ef27-4af4-8ea5-b9ebeeaf47dc" alt="" />
             <div className="inputBox">
                 <SearchRounded></SearchRounded>
                 <input type="text" name="" id="" placeholder='Search'/>
