@@ -21,7 +21,7 @@ const ItemCard = ({imgSrc, name, ratings, price}) => {
                 <h3 className='itemName'>{name}</h3>
                 <div className="bottom">
                     <div className="ratings">
-                        {Array.apply(null, {length: ratings}).map((e, i) => (<i
+                        {Array.apply(null, {length: 5}).map((e, i) => (<i
                         className={`rating ${currentValue > i ? "orange" : "gray"}`}
                         onClick={() => handleClick(i + 1)}
                         key={i}>
