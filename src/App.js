@@ -14,7 +14,7 @@ import { useEffect } from "react";
 import BannerName from "./components/BannerName";
 import SubMenuConainer from "./components/SubMenuConainer";
 import MenuCard from "./components/MenuCard";
-
+import {MenuItems, Items} from "./components/Data"
 function App() {
   useEffect(() => {
     const menuli = document.querySelectorAll("#menu li");
@@ -23,7 +23,12 @@ function App() {
       this.classList.add("active");
     }
     menuli.forEach((n) => n.addEventListener("click", setMenuActive));
+
+    // menu card active toggle
+    
   }, []);
+
+
   return (
     <div className="App">
       {/* Header Section  */}
@@ -47,9 +52,15 @@ function App() {
               <SubMenuConainer name={"Menu Catagroy"}></SubMenuConainer>
             </div>
             <div className="rowContainer">
-              <MenuCard imgSrc={"https://img.freepik.com/premium-photo/homemade-burger-with-beef-cheese-onion-marmalade-wooden-board-fast-food-concept-american-food_90258-3917.jpg?w=2000"} name={"Burger"} isActive></MenuCard>
-              <MenuCard imgSrc={"https://img.freepik.com/premium-photo/homemade-burger-with-beef-cheese-onion-marmalade-wooden-board-fast-food-concept-american-food_90258-3917.jpg?w=2000"} name={"Burger"} isActive></MenuCard>
-              <MenuCard imgSrc={"https://img.freepik.com/premium-photo/homemade-burger-with-beef-cheese-onion-marmalade-wooden-board-fast-food-concept-american-food_90258-3917.jpg?w=2000"} name={"Burger"} isActive></MenuCard>
+              {
+                MenuItems.map(data => (<MenuCard 
+                  key={data.id}
+                  imgSrc={data.imgSrc}
+                  name={data.name}
+                  isActive = {data.id === 1 ? true : false}
+                ></MenuCard>))
+              }
+              
             </div>
             <div className="dishItemContainer"></div>
           </div>
