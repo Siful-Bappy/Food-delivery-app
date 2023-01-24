@@ -163,14 +163,14 @@ main{
   line-height: 70px;
   transition: 0.5s;
 }
-.bottomMenu ul li:hover a .icon{
+.bottomMenu ul li.active a .icon{
   transform: translateY(-16px);
 }
 .bottomMenu ul li a .icon .MuiSvgIcon-root{
   font-size: 30px;
   color: #373848;
 }
-.bottomMenu ul li:hover a .icon .MuiSvgIcon-root{
+.bottomMenu ul li.active a .icon .MuiSvgIcon-root{
   color: #faf9fb;
   transition: 0.5s;
 }
@@ -205,4 +205,22 @@ main{
   border-top-left-radius: 18px;
   background-color: transparent;
   box-sizing: 0px -10px 0 0 #faf9fb;
+}
+.bottomMenu ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(calc(60px * 0));
+}
+.bottomMenu ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(calc(60px * 1));
+}
+.bottomMenu ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(calc(60px * 2));
+}
+.bottomMenu ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(calc(60px * 3));
+}
+.bottomMenu ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(calc(60px * 4));
+}
+.bottomMenu ul li:nth-child(6).active ~ .indicator {
+  transform: translateX(calc(60px * 5));
 }

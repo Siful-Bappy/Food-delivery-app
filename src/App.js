@@ -3,8 +3,17 @@ import './App.css';
 import Header from './components/Header';
 import MenuContainer from './components/ManuContainer';
 import { AccountBalanceWalletRounded, Chat, Favorite, HomeRounded, Settings, SummarizeRounded } from '@mui/icons-material';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    const menuli = document.querySelectorAll("#menu li");
+    function setMenuActive() {
+      menuli.forEach((n) => n.classList.remove("active"));
+      this.classList.add("active");
+    }
+    menuli.forEach(n => n.addEventListener("click", setMenuActive))
+  }, [])
   return (
     <div className="App">
       {/* Header Section  */}
