@@ -9,10 +9,10 @@ const ItemCard = ({imgSrc, name, ratings, price}) => {
                 <Favorite></Favorite>
             </div>
             <div className="imgBox">
-                <img src={imgSrc} alt="" />
+                <img className='itemImg' src={imgSrc} alt="" />
             </div>
-            <div className="imgcontent">
-                <h3>{name}</h3>
+            <div className="itemContent">
+                <h3 className='itemName'>{name}</h3>
                 <div className="bottom">
                     <div className="ratings">
                         {Array.apply(null, {length: ratings}).map((e, i) => (<i
@@ -21,7 +21,7 @@ const ItemCard = ({imgSrc, name, ratings, price}) => {
                         </i>))}
                         <h3 className='price'><span>$</span> {price}</h3>
                     </div>
-                    <i className="addtoCart">
+                    <i className="addToCart">
                         <AddRounded></AddRounded>
                     </i>
                 </div>
