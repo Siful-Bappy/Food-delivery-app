@@ -13,6 +13,7 @@ import {
 import { useEffect } from "react";
 import BannerName from "./components/BannerName";
 import SubMenuConainer from "./components/SubMenuConainer";
+import MenuCard from "./components/MenuCard";
 
 function App() {
   useEffect(() => {
@@ -45,7 +46,11 @@ function App() {
             <div className="menuCard">
               <SubMenuConainer name={"Menu Catagroy"}></SubMenuConainer>
             </div>
-            <div className="rowContainer"></div>
+            <div className="rowContainer">
+              <MenuCard imgSrc={"https://img.freepik.com/premium-photo/homemade-burger-with-beef-cheese-onion-marmalade-wooden-board-fast-food-concept-american-food_90258-3917.jpg?w=2000"} name={"Burger"} isActive></MenuCard>
+              <MenuCard imgSrc={"https://img.freepik.com/premium-photo/homemade-burger-with-beef-cheese-onion-marmalade-wooden-board-fast-food-concept-american-food_90258-3917.jpg?w=2000"} name={"Burger"} isActive></MenuCard>
+              <MenuCard imgSrc={"https://img.freepik.com/premium-photo/homemade-burger-with-beef-cheese-onion-marmalade-wooden-board-fast-food-concept-american-food_90258-3917.jpg?w=2000"} name={"Burger"} isActive></MenuCard>
+            </div>
             <div className="dishItemContainer"></div>
           </div>
         </div>
