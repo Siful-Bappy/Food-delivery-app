@@ -5,7 +5,7 @@ const BannerName = ({name, discount, link}) => {
         <div className='bannerContent'>
             <h3>Hello {name}</h3>
             <p>Get Free discount for every <span>${discount}</span> purchase</p>
-            <a>Learn more</a>
+            <a></a>
         </div>
     );
 };

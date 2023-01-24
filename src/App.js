@@ -12,6 +12,7 @@ import {
 } from "@mui/icons-material";
 import { useEffect } from "react";
 import BannerName from "./components/BannerName";
+import SubMenuConainer from "./components/SubMenuConainer";
 
 function App() {
   useEffect(() => {
@@ -38,6 +39,14 @@ function App() {
               alt=""
               className="deliveryPic"
             />
+          </div>
+          {/* Dish Container */}
+          <div className="dishContainer">
+            <div className="menuCard">
+              <SubMenuConainer name={"Menu Catagroy"}></SubMenuConainer>
+            </div>
+            <div className="rowContainer"></div>
+            <div className="dishItemContainer"></div>
           </div>
         </div>
         <div className="rightMenu"></div>
