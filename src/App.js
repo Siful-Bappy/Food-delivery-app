@@ -15,6 +15,7 @@ import BannerName from "./components/BannerName";
 import SubMenuConainer from "./components/SubMenuConainer";
 import MenuCard from "./components/MenuCard";
 import {MenuItems, Items} from "./components/Data"
+import ItemCard from "./components/ItemCard";
 function App() {
   useEffect(() => {
     const menuli = document.querySelectorAll("#menu li");
@@ -31,7 +32,6 @@ function App() {
       rowContainer.forEach(row => row.classList.remove("active"));
       this.classList.add("active");
     }
-    console.log(rowContainer)
   }, []);
 
 
@@ -68,7 +68,16 @@ function App() {
               }
               
             </div>
-            <div className="dishItemContainer"></div>
+            <div className="dishItemContainer">
+              {
+                Items.map(item => (<ItemCard
+                  key={item.id}
+                  imgSrc={item.imgSrc}
+                  name={item.name} 
+                  ratings={item.ratings} 
+                  price={item.price}></ItemCard>))
+              }
+            </div>
           </div>
         </div>
         <div className="rightMenu"></div>
