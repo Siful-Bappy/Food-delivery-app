@@ -25,7 +25,13 @@ function App() {
     menuli.forEach((n) => n.addEventListener("click", setMenuActive));
 
     // menu card active toggle
-    
+    const rowContainer = document.querySelectorAll(".rowContainer .rowMenuCard")
+    rowContainer.forEach(row => row.addEventListener("click", setActiveRow));
+    function setActiveRow() {
+      rowContainer.forEach(row => row.classList.remove("active"));
+      this.classList.add("active");
+    }
+    console.log(rowContainer)
   }, []);
 
 
